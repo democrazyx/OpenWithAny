@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "OpenWithAny",
+    "version": "1.0",
+    "description": "open current page url with anything",
+    "permissions": [
+      "activeTab"
+    ],
+    "icons": {
+        "144": "144.png"
+      },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_title": "OpenWithAny"
+    }
+  }

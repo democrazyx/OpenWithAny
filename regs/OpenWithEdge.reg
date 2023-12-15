@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\openedge]
+@="URL:OPEN EDGE"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\openedge\shell]
+
+[HKEY_CLASSES_ROOT\openedge\shell\open]
+
+[HKEY_CLASSES_ROOT\openedge\shell\open\command]
+@="powershell.exe -WindowStyle hidden -NoProfile -Command \"Invoke-Command { $args = '%1'; $args = $args -Replace 'openedge://', ''; $args = $args -Replace '//', '://'; $args = $args -Replace ':://', '://'; Start-Process -FilePath 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe' -ArgumentList $args }\""
